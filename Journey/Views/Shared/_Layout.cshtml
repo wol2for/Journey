@@ -1,0 +1,677 @@
+﻿<!DOCTYPE html>
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+        .gm-style .gm-style-mtc label, .gm-style .gm-style-mtc div {
+            font-weight: 400
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <style type="text/css">
+        .gm-style .gm-style-cc span, .gm-style .gm-style-cc a, .gm-style .gm-style-mtc div {
+            font-size: 10px
+        }
+    </style>
+    <style type="text/css">
+        @@media print {
+            .gm-style .gmnoprint, .gmnoprint {
+                display: none
+            }
+        }
+
+        @@media screen {
+            .gm-style .gmnoscreen, .gmnoscreen {
+                display: none
+            }
+        }
+    </style>
+    <style type="text/css">
+        .gm-style-pbc {
+            transition: opacity ease-in-out;
+            background-color: rgba(0,0,0,0.45);
+            text-align: center
+        }
+
+        .gm-style-pbt {
+            font-size: 22px;
+            color: white;
+            font-family: Roboto,Arial,sans-serif;
+            position: relative;
+            margin: 0;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%)
+        }
+    </style>
+
+    <title>@ViewBag.Title - путешествия и отдых</title>
+
+    <!-- Latest Bootstrap min CSS -->
+    <link href="~/Content/bootstrap/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Google Font -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="~/fonts/font-awesome.min.css" rel="stylesheet" />
+
+    <!--- owl carousel Css-->
+    <link href="~/Content/owl.carousel.css" rel="stylesheet" />
+    <link href="~/Content/owl.theme.css" rel="stylesheet" />
+
+    <!--Flex slider-->
+    <!--<link rel="stylesheet" href="assets/css/flexslider.css">-->
+    <link href="~/Content/flexslider.css" rel="stylesheet" />
+
+    <!-- component CSS -->
+    <!--<link rel="stylesheet" href="assets/css/aos.css">-->
+    <link href="~/Content/aos.css" rel="stylesheet" />
+
+    <!-- Style CSS -->
+    <!--<link rel="stylesheet" href="assets/css/style.css">-->
+    <link href="~/Content/style.css" rel="stylesheet" />
+
+
+   
+    <style type="text/css">
+        .gm-style {
+            font: 400 11px Roboto, Arial, sans-serif;
+            text-decoration: none;
+        }
+
+            .gm-style img {
+                max-width: none;
+            }
+    </style>
+    
+</head>
+
+
+<body data-spy="scroll" data-offset="80" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+    <!-- START PRELOADER -->
+    <div class="preloader">
+        <div class="status">
+            <div class="status-mes"></div>
+        </div>
+    </div>
+    <!-- END PRELOADER -->
+    <!-- START NAVBAR -->
+    <nav class="navbar navbar-toggleable-sm fixed-top navbar-light bg-faded site-navigation navbar-fixed">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="~/assets/img/s411.png" />
+                <!--<img style="width:100px" src="~/assets/img/s4.png" />-->
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="icon-menu"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#st">Поиск туров</a></li>
+                    @*<li class="nav-item"><a class="nav-link" href="#special_package">Горящие туры</a></li>*@
+                    <li class="nav-item"><a class="nav-link" href="#top_deals">Страны</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#deals_discount">Услуги</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END NAVBAR -->
+    <!-- START Слоган -->
+    <section data-stellar-background-ratio="0.3" id="home" class="home_parallax" style="background-image: url(&quot;assets/img/bg/parallax-bg.jpg&quot;); background-size: cover; background-position: 50% 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="hero-text">
+                        <h1>Попробуй мир!</h1>
+                        <p>Будь там, где твои мечты</p>
+                        <a href="#st" class="btn btn-default btn-home-bg">Найти тур</a>
+                    </div>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->
+    </section>
+    <!-- END  слоган -->
+    <!-- START Начало S-elephant -->
+    <section id="service" class="our_services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="section-title">
+                        <h2>S-elephant</h2>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="col-md-6 text-right">
+                    <p>
+                        Если вы интересуетесь популярными и экзотичными турами в любой конец мира, обращайтесь в наше туристическое агентство,
+                        и мы подберем самый выгодный и интересный для вас тур.
+                </div>
+                <div class="col-md-6 text-left">
+                    <p>
+                        Полезная информация о странах поможет Вам определиться с направлением и осуществить путешествие мечты.
+                        Так же Вы можете подобрать горящий тур по конкретной стране.
+                    </p>
+                </div>
+            </div>
+            <!-- END ROW -->
+            <!-- NOTES -->
+            <div style="margin-top: 80px;" class="row text-center">
+            </div>
+            <!-- END ROW & NOTES -->
+        </div><!-- END CONTAINER -->
+    </section>
+    <!-- END Начало S-elephant -->
+    <!-- START Поиск туров -->
+    <section id="st" @*data-stellar-background-ratio="0.3"*@ class="why_choose section-padding" style="background-image: url(assets/img/bg/service-bg.jpg);  background-size:cover; background-position: center center;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" data-aos="fade-up">
+                    <div class="section-title text-center">
+                        <h2 class="section-title-white">Поиск туров</h2>
+                        <span class="section-title-white"></span>
+                        <p class="section-title-white">Подбор тура для отдыха за границей</p>
+                    </div>
+                </div><!-- END COL -->
+            </div>
+            <!-- END ROW -->
+            <div class="row text-center">
+                <div class="col-sm-12" data-aos="fade-up">
+                    <div style="overflow-x:auto;" class="single-choose">
+                        <i class="fa fa-plane"></i>
+                        <div id="tour_search_module">
+                        </div>
+                        <script src="http://module.ittour.com.ua/tour_search.jsx?id=283D352G11013O7288874314&ver=1&type=2970"></script>
+                        @*<img style="width:100%" src="~/assets/img/bg/st.JPG" />*@
+                    </div>
+                </div>
+                <!-- END COL -->
+            </div>
+            <!-- END ROW -->
+        </div><!-- END CONTAINER -->
+    </section>
+    <!-- END Поиск туров -->
+    <!-- START инфо -->
+    <section class="complete-project-area counter_feature section-padding">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-3 col-sm-6 col-xs-12 no-padding" data-aos="fade-up">
+                    <div class="single-project-complete">
+                        <h3>БОЛЕЕ ЧЕМ</h3>
+                        <h2 class="counter-num">20</h2>
+                        <h3>СТРАН</h3>
+                    </div>
+                </div><!-- END COL -->
+                <div class="col-md-3 col-sm-6 col-xs-12 no-padding" data-aos="fade-up">
+                    <div class="single-project-complete">
+                        <h3>СВЫШЕ</h3>
+                        <h2 class="counter-num">1000</h2>
+                        <h3>НАПРАВЛЕНИЙ</h3>
+                    </div>
+                </div><!-- END COL -->
+                <div class="col-md-3 col-sm-6 col-xs-12 no-padding" data-aos="fade-up">
+                    <div class="single-project-complete">
+                        <h3>СВЫШЕ</h3>
+                        <h2 class="counter-num">5660</h2>
+                        <h3>ОТЕЛЕЙ</h3>
+                    </div>
+                </div><!-- END COL -->
+                <div class="col-md-3 col-sm-6 col-xs-12 no-padding" data-aos="fade-up">
+                    <div class="single-project-complete brnone">
+                        <h3>ЭКСУРСИЙ</h3>
+                        <h2 class="counter-num">8322</h2>
+                        <h3>ПО ВСЕМУ МИРУ</h3>
+                    </div>
+                </div><!-- END COL -->
+            </div><!-- END ROW -->
+        </div><!-- END CONTAINER -->
+    </section>
+    <!-- END инфо -->
+    @*<!-- START Горящие туры -->
+        <section id="special_package" class="special_package section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h2>Горящие туры</h2>
+                            <span></span>
+                        </div>
+                    </div><!-- END COL -->
+                </div><!-- END ROW -->
+                <div class="row text-center">
+                    <div class="col-md-12" data-aos="fade-up">
+                        <img src="~/assets/img/bg/ht.jpg" style="width:100%;" />
+                    </div><!-- END COL -->
+                </div><!-- END ROW -->
+            </div><!-- END CONTAINER -->
+        </section>
+        <!-- END Горящие туры -->*@
+    <!-- START Страны -->
+    <section id="top_deals" class="top_deals section-padding">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12" data-aos="fade-up">
+                    <div class="section-title text-center">
+                        <h2>Страны</h2>
+                        <span></span>
+                        <p>Лучшие страны мира к вашим услугам.</p>
+                    </div>
+                </div><!-- END COL -->
+            </div><!-- END ROW -->
+            <div class="row" data-aos="fade-up">
+                <div class="col-sm-4 col-xs-12 no-padding">
+                    <div class="grid">
+                        <figure class="effect-sadie">
+                            <img style="position: static" src="assets/img/portfolio/11.jpg" alt="" />
+                            <div style="padding: 6px 15px;" class="post-date">
+                                <span style="font-family: 'Montserrat',sans-serif; letter-spacing: 1px; font-size:18px">Египет</span>
+                            </div>
+                            <figcaption>
+                                <h4>Египет</h4>
+                                <p><a href="#">Подробней</a></p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!--- END GRID -->
+                </div><!--- END COL -->
+                <div class="col-sm-4 col-xs-12 no-padding">
+                    <div class="grid">
+                        <figure class="effect-sadie">
+                            <a href="#">
+                                <img style="position:static" src="assets/img/portfolio/22.jpg" alt="" />
+                                <div style="padding: 6px 15px; left: 34%;" class="post-date">
+                                    <span style="font-family: 'Montserrat',sans-serif; letter-spacing: 1px; font-size:18px">Турция</span>
+                                </div>
+                                <figcaption>
+                                    <h4>Турция</h4>
+                                    <p>
+                                        Подробней
+                                    </p>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div><!--- END GRID -->
+                </div><!--- END COL -->
+                <div class="col-sm-4 col-xs-12 no-padding">
+                    <div class="grid">
+                        <figure class="effect-sadie">
+                            <img style="position:static" src="assets/img/portfolio/33.jpg" alt="" />
+                            <div style="padding: 6px 15px; left: 65%;" class="post-date">
+                                <span style="font-family: 'Montserrat',sans-serif; letter-spacing: 1px; font-size:18px">Испания</span>
+                            </div>
+                            <figcaption>
+                                <h4>Испания</h4>
+                                <p><a href="#">Подробней</a></p>
+                            </figcaption>
+                        </figure>
+                    </div><!--- END GRID -->
+                </div><!--- END COL -->
+                <div class="col-sm-4 col-xs-12 no-padding">
+                    <div class="grid">
+                        <figure class="effect-sadie">
+                            <img style="position:static" src="assets/img/portfolio/44.jpg" alt="" />
+                            <div style="padding: 6px 15px;" class="post-date">
+                                <span style="font-family: 'Montserrat',sans-serif; letter-spacing: 1px; font-size:18px">Шри-Ланка</span>
+                            </div>
+                            <figcaption>
+                                <h4>Шри-Ланка</h4>
+                                <p><a href="#">Подробней</a></p>
+                            </figcaption>
+                        </figure>
+                    </div><!--- END GRID -->
+                </div><!--- END COL -->
+                <div class="col-sm-4 col-xs-12 no-padding">
+                    <div class="grid">
+                        <figure class="effect-sadie">
+                            <img style="position:static" src="assets/img/portfolio/55.jpg" alt="" />
+                            <div style="padding: 6px 15px; left:34%" class="post-date">
+                                <span style="font-family: 'Montserrat',sans-serif; letter-spacing: 1px; font-size:18px">Греция</span>
+                            </div>
+                            <figcaption>
+                                <h4>Греция</h4>
+                                <p><a href="#">Подробней</a></p>
+                            </figcaption>
+                        </figure>
+                    </div><!--- END GRID -->
+                </div><!--- END COL -->
+                <div class="col-sm-4 col-xs-12 no-padding">
+                    <div class="grid">
+                        <figure class="effect-sadie">
+                            <img style="position:static" src="assets/img/portfolio/66.jpg" alt="" />
+                            <div style="padding: 6px 15px; left:65%" class="post-date">
+                                <span style="font-family: 'Montserrat',sans-serif; letter-spacing: 1px; font-size:18px">Таиланд</span>
+                            </div>
+                            <figcaption>
+                                <h4>Таиланд</h4>
+                                <p><a href="#">Подробней</a></p>
+                            </figcaption>
+                        </figure>
+                    </div><!--- END GRID -->
+                </div>
+
+                <div class="col-sm-4 col-xs-12 no-padding">
+                    <div class="grid">
+                        <figure class="effect-sadie">
+                            <img style="position:static" src="assets/img/portfolio/77.jpg" alt="" />
+                            <div style="padding: 6px 15px;" class="post-date">
+                                <span style="font-family: 'Montserrat',sans-serif; letter-spacing: 1px; font-size:18px">Мальдивы</span>
+                            </div>
+                            <figcaption>
+                                <h4>Мальдивы</h4>
+                                <p><a href="#">Подробней</a></p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12 no-padding">
+                    <div class="grid">
+                        <figure class="effect-sadie">
+                            <img style="position:static" src="assets/img/portfolio/88.jpg" alt="" />
+                            <div style="padding: 6px 15px; left:34%" class="post-date">
+                                <span style="font-family: 'Montserrat',sans-serif; letter-spacing: 1px; font-size:18px">Черногория</span>
+                            </div>
+                            <figcaption>
+                                <h4>Черногория</h4>
+                                <p><a href="#">Подробней</a></p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12 no-padding">
+                    <div class="grid">
+                        <figure class="effect-sadie">
+                            <img style="position:static" src="assets/img/portfolio/99.jpg" alt="" />
+                            <div style="padding: 6px 15px; left:65%" class="post-date">
+                                <span style="font-family: 'Montserrat',sans-serif; letter-spacing: 1px; font-size:18px">ОАЭ</span>
+                            </div>
+                            <figcaption>
+                                <h4>ОАЭ</h4>
+                                <p><a href="#">Подробней</a></p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div><!--- END COL -->
+        </div><!--- END CONTAINER-FLUID -->
+    </section>
+    <!-- END Страны -->
+    <!-- START Услуги -->
+    <section id="deals_discount" class="deals_discount section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" data-aos="fade-up">
+                    <div class="section-title text-center">
+                        <h2>Услуги</h2>
+                        <span></span>
+                        <p>Лучшие предложения для Вас.</p>
+                    </div>
+                </div><!-- END COL -->
+            </div><!-- END ROW -->
+            <div class="row">
+                <div class="col-md-12" data-aos="fade-up">
+                    <div id="discount-slider" class="owl-carousel">
+                        <div class="single-discount">
+                            <div class="single-img">
+                                <img src="assets/img/discount/11.jpg" class="img-fluid" alt="" />
+                            </div>
+                            <div class="single_discount_dsc">
+                                <h3 style="text-align:center">Оформление загранпаспортов</h3>
+                                <p>Оформить загранпаспорт через интернет, строки, тарифы, другие услуги.</p>
+                                <a href="#" target="_blank">Подробней</a>
+                            </div>
+                        </div><!-- END SINGLE DISCOUNT -->
+                        <div class="single-discount">
+                            <div class="single-img">
+                                <img src="assets/img/discount/22.jpg" class="img-fluid" alt="" />
+                            </div>
+                            <div class="single_discount_dsc">
+                                <h3 style="text-align:center">Страхование</h3>
+                                <p>Выбрав страховку Вы будете уверены в получении помощи, в какой бы стране вы ни находились.</p>
+                                <a href="#" target="_blank">Подробней</a>
+                            </div>
+                        </div><!-- END SINGLE DISCOUNT -->
+                        <div class="single-discount">
+                            <div class="single-img">
+                                <img src="~/assets/img/discount/33.jpg" class="img-fluid" alt="" />
+                            </div>
+                            <div class="single_discount_dsc">
+                                <h3 style="text-align:center">TravelSIM</h3>
+                                <p>TravelSIM - бесплатные входящие звонки в 141 стране мира! Теперь не нужно оплачивать большие счета за роуминг.</p>
+                                <a href="#" target="_blank">Подробней</a>
+                            </div>
+                        </div><!-- END SINGLE DISCOUNT -->
+                    </div>
+                </div>
+            </div><!-- END ROW -->
+        </div><!-- END CONTAINER -->
+    </section>
+    <!-- END Услуги -->
+    @RenderBody()
+    <!-- START инстаграм -->
+    <section id="blog" class="blog_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" data-aos="fade-up">
+                    <div class="section-title text-center wow zoomIn">
+                        <h2>Мы в инстаграме</h2>
+                        <span></span>
+                        <p>Эмоции наших счастливых покупателей</p>
+                    </div>
+                </div><!-- END COL -->
+            </div><!-- END ROW -->
+            <div id="blogInsta" class="row">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div id="inst1" class="single_blog">
+                        <div class="blog-text wow fadeInLeft">
+                            <h4><a target="_blank" href="">INSTAGRAM<i class="fa fa-instagram fa-2x" aria-hidden="true" style="float: right;"></i></a></h4>
+                            <div style="overflow: auto;  min-height:150px; max-height:200px">
+                            </div>
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div id="inst2" class="single_blog">
+                        <div class="blog-text wow fadeInLeft">
+                            <h4><a target="_blank" href="">INSTAGRAM<i class="fa fa-instagram fa-2x" aria-hidden="true" style="float: right;"></i></a></h4>
+                            <div style=" overflow: auto; min-height:150px; max-height:200px">
+                            </div>
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div id="inst3" class="single_blog">
+                        <div class="blog-text wow fadeInRight">
+                            <h4><a target="_blank" href="">INSTAGRAM<i class="fa fa-instagram fa-2x" aria-hidden="true" style="float: right;"></i></a></h4>
+                            <div style="overflow: auto; min-height:150px; max-height:200px">
+                            </div>
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div id="inst4" class="single_blog">
+                        <div class="blog-text wow fadeInRight">
+                            <h4><a target="_blank" href="">INSTAGRAM<i class="fa fa-instagram fa-2x" aria-hidden="true" style="float: right;"></i></a></h4>
+                            <div style="overflow: auto; min-height:150px; max-height:200px">
+                            </div>
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->
+    </section>
+    <!-- END инстаграм -->
+    <!-- START CONTACT FORM-->
+    <section id="contact" class="contact_area ">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 col-xs-12 no-padding" data-aos="fade-up">
+                    <div class="contact_address">
+                        <h3>Контакты</h3>
+                        <ul>
+                            <li><i class="fa fa-rocket"></i>г. Днепр, ул. Амурская, 112</li>
+                            <li><i class="fa fa-phone"></i>(+38) 063-769-69-00, (+38) 066-267-00-07</li>
+                            <li><i class="fa fa-envelope"></i>olesiatour@gmail.com</li>
+                            <li><i class="fa fa-clock-o"></i>Понедельник - Пятница: 09:00 - 18:00</li>
+                        </ul>
+                    </div>
+                </div><!-- END COL -->
+                <script type="text/javascript">
+
+                </script>
+                <div class="col-lg-6 col-sm-12 col-xs-12 no-padding" data-aos="fade-up">
+                    <div id="localContact" style="padding: 105px 60px;" class="contact">
+                        <h3>СВЯЖИТЕСЬ С НАМИ</h3>
+                        @using (Ajax.BeginForm("SendMail", "Home", new AjaxOptions { HttpMethod = "POST", OnSuccess = "OnSuccess", OnFailure = "OnFailure", OnBegin = "OnBegin" }))
+                        {
+                            @*<form id="contact-form" method="post" action="@Url.Action("SendMail","Home")">*@
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" id="first-name" placeholder="Имя" required="required">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="email" name="email" class="form-control" id="first-email" placeholder="Email" required="required">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <input type="text" name="subject" class="form-control" id="subject" placeholder="Тема" required="required">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <textarea rows="6" name="messages" class="form-control" id="description" placeholder="Ваше сообщение" required="required"></textarea>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="actions">
+                                        <input type="submit" value="Отпарвить" name="submit" id="submitButton" class="btn btn-lg btn-contact-bg" title="Отправте сообщение!" />
+                                        <img style="display:none" id="loadingGif" src="/assets/img/loadingGif.gif" />
+                                    </div>
+                                </div>
+                                <div id="msgsuccess" style="visibility: hidden; opacity: 0.0;" class="col-md-6">
+                                    <h3>Сообщение отправлено</h3>
+                                </div>
+                            </div>
+                            @*</form>*@
+                        }
+                    </div>
+                </div><!-- END COL -->
+            </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->
+    </section>
+    <!-- END CONTACT FORM -->
+    <!-- START MAP -->
+    <div id="map"></div>
+    <!-- END MAP -->
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+
+    <!-- Latest jQuery -->
+    @*<script src="~/Scripts/js/jquery-1.12.4.min.js"></script>*@
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <!-- Latest compiled and minified Bootstrap -->
+    <!--<script src="~/Scripts/bootstrap/js/bootstrap.min.js"></script>-->
+    <script src="~/Scripts/js/bootstrap.min.js"></script>
+    <!-- modernizer JS -->
+    <!--<script src="assets/js/modernizr-2.8.3.min.js"></script>-->
+    <!-- jquery nav JS -->
+    <!--<script src="assets/js/jquery.nav.js"></script>-->
+    <script src="~/Scripts/js/jquery.nav.js"></script>
+    <!-- jquery smooth-scroll JS -->
+    <script src="~/Scripts/js/smooth-scroll.js"></script>
+    <!-- owl-carousel min js  -->
+    <script src="~/Scripts/owl.carousel.min.js"></script>
+    <!-- stellar js -->
+    <script src="~/Scripts/js/jquery.stellar.min.js"></script>
+    <!-- countTo js -->
+    <script src="~/Scripts/js/jquery.inview.min.js"></script>
+    <!-- jquery flexslider min js -->
+    <script src="~/Scripts/js/jquery.flexslider-min.js"></script>
+    <!-- scrolltopcontrol js -->
+    <script src="~/Scripts/js/scrolltopcontrol.js"></script>
+    <!-- form-contact js -->
+    <script src="~/Scripts/js/form-contact.js"></script>
+    <!-- aos js -->
+    <script src="~/Scripts/js/aos.js"></script>
+    <!-- switcher js -->
+    <script src="~/Scripts/js/switcher.js"></script>
+    <!-- map js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuQV1y9-oIZq0LCktO8kB9tJ9_fDwH2h8"></script>
+    <!-- unobtrusive-ajax -->
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <!-- scripts js -->
+    <script src="~/Scripts/js/scripts.js"></script>
+    <script>
+        //Callback methods for sending email
+        function OnSuccess() {
+            $('#submitButton').css('display', 'block');
+            $('#loadingGif').css('display', 'none');
+            //$('#msgsuccess').css('visibility', 'visible');
+            $('#msgsuccess').css('visibility', 'visible').animate({ opacity: 1.0 }, 500);
+            setTimeout('$("#msgsuccess").animate({ opacity: 0.0 }, 5000)', 500);
+        }
+        function OnFailure() {
+            alert("Что-то пошло не так, попробуйте позже :-(");
+            $('#submitButton').css('display', 'block');
+            $('#loadingGif').css('display', 'none');
+        }
+        function OnBegin() {
+            $('#submitButton').css('display', 'none');
+            $('#loadingGif').css('display', 'block');
+        }
+
+        //Settings API INSTAGRAM
+        $(function ($) {
+            $('table[width="100%"],[cellspacing="0"], [cellpadding="3"]').css('margin', 'auto');
+            var tok = '7014653161.b134d61.5a763e6c556f4f8f908980040502f02a',
+                username = 's_elephant_travel',
+                kolichestvo = 4;
+
+            $.ajax({
+                url: 'https://api.instagram.com/v1/users/search',
+                dataType: 'jsonp',
+                type: 'GET',
+                data: { access_token: tok, q: username },
+                success: function (result) {
+                    //console.log(result);
+                    $.ajax({
+                        url: 'https://api.instagram.com/v1/users/' + result.data[0].id + '/media/recent',
+                        dataType: 'jsonp',
+                        type: 'GET',
+                        data: { access_token: tok, count: kolichestvo },
+                        success: function (result2) {
+                            //console.log(result2);
+                            var i = 1;
+                            for (x in result2.data) {
+                                var g = '#inst' + i;
+                                $(g).append('<img  class="blog-photo" width="420" height="350" alt="" src="' + result2.data[x].images.standard_resolution.url + '" />');
+
+                                if (result2.data[x].caption == null)
+                                    $(g).children('div').children('div').append('S-Elephant Ваш гид по миру!');
+                                else
+                                    $(g).children('div').children('div').append('<span>' + result2.data[x].caption.text + '</span>');
+
+                                $(g).children('div').children('h4').children('a').attr("href", result2.data[x].link);
+                                i++;
+                            }
+
+                        },
+                        error: function (result2) {
+                            console.log(result2);
+                        }
+                    });
+                },
+                error: function (result) {
+                    console.log(result);
+                }
+            });
+        });
+
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
