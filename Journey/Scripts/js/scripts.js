@@ -1,7 +1,7 @@
 /*
-Author       : Syed Ekram.
-Template Name: FZ - Tour & Travel Agency Template
-Version      : 1.0
+Author       : Jora
+Template Name: S-elephant
+Version      : 1.0.1
 */
 (function($) {
 	'use strict';

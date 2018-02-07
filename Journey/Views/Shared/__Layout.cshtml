@@ -5,17 +5,20 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style type="text/css">
+
         .gm-style .gm-style-mtc label, .gm-style .gm-style-mtc div {
             font-weight: 400
         }
     </style>
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <style type="text/css">
+
         .gm-style .gm-style-cc span, .gm-style .gm-style-cc a, .gm-style .gm-style-mtc div {
             font-size: 10px
         }
     </style>
     <style type="text/css">
+
         @@media print {
             .gm-style .gmnoprint, .gmnoprint {
                 display: none
@@ -29,6 +32,7 @@
         }
     </style>
     <style type="text/css">
+
         .gm-style-pbc {
             transition: opacity ease-in-out;
             background-color: rgba(0,0,0,0.45);
@@ -47,38 +51,30 @@
             transform: translateY(-50%)
         }
     </style>
-
     <title>@ViewBag.Title - путешествия и отдых</title>
-
     <!-- Latest Bootstrap min CSS -->
     <link href="~/Content/bootstrap/bootstrap.min.css" rel="stylesheet" />
-
     <!-- Google Font -->
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,600i,700,700i" rel="stylesheet">
-
     <!-- Font Awesome CSS -->
     <link href="~/fonts/font-awesome.min.css" rel="stylesheet" />
-
     <!--- owl carousel Css-->
     <link href="~/Content/owl.carousel.css" rel="stylesheet" />
     <link href="~/Content/owl.theme.css" rel="stylesheet" />
-
     <!--Flex slider-->
     <!--<link rel="stylesheet" href="assets/css/flexslider.css">-->
     <link href="~/Content/flexslider.css" rel="stylesheet" />
-
     <!-- component CSS -->
     <!--<link rel="stylesheet" href="assets/css/aos.css">-->
     <link href="~/Content/aos.css" rel="stylesheet" />
-
     <!-- Style CSS -->
     <!--<link rel="stylesheet" href="assets/css/style.css">-->
     <link href="~/Content/style.css" rel="stylesheet" />
 
 
-   
     <style type="text/css">
+
         .gm-style {
             font: 400 11px Roboto, Arial, sans-serif;
             text-decoration: none;
@@ -88,7 +84,7 @@
                 max-width: none;
             }
     </style>
-    
+
 </head>
 
 
@@ -112,38 +108,72 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="#home">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#st">Поиск туров</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="@Url.Action("Index", "Main")#Home">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Main")#st">Поиск туров</a></li>
                     @*<li class="nav-item"><a class="nav-link" href="#special_package">Горящие туры</a></li>*@
-                    <li class="nav-item"><a class="nav-link" href="#top_deals">Страны</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#deals_discount">Услуги</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Main")#top_deals">Страны</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Main")#deals_discount">Услуги</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Main")#contact">Контакты</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- END NAVBAR -->
     <!-- START Слоган -->
-    <section data-stellar-background-ratio="0.3" id="home" class="home_parallax" style="height: 700px;
-    background-image: url(@Url.Content("/assets/img/bg/parallax-bg.jpg")); background-size: cover; background-position: 50% 0px;">
-        <div class="container">
-            
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="hero-text">
-                        <h1>Попробуй мир!</h1>
-                        <p>Будь там, где твои мечты</p>
-                        <a href="#st" class="btn btn-default btn-home-bg">Найти тур</a>
-                    </div>
-                </div><!--- END COL -->
-            </div><!--- END ROW -->
-        </div><!--- END CONTAINER -->
+    <section data-stellar-background-ratio="0.3" id="home" class="home_parallax" style="height: 200px;
+    background-image: url(@Url.Content("/assets/img/bg/parallax-bg-mini.jpg")); background-size: cover; background-position: 50% 0px;">
+        @*<div class="container">
+
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="hero-text">
+                            <h1>Попробуй мир!</h1>
+                            <p>Будь там, где твои мечты</p>
+                            <a href="#st" class="btn btn-default btn-home-bg">Найти тур</a>
+                        </div>
+                    </div><!--- END COL -->
+                </div><!--- END ROW -->
+            </div><!--- END CONTAINER -->*@
     </section>
     <!-- END  слоган -->
-    
-  
+
+
     @RenderBody()
-   
+    <style>
+        .lol {
+            background: #fff none repeat scroll 0 0;
+            border-radius: 30px;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+            color: #f9461d;
+            font-size: 18px;
+            height: 45px;
+            line-height: 45px;
+            /*margin-right: 0px;
+            margin-left: 45px;*/
+            text-align: center;
+            width: 45px;
+        }
+    </style>
+    <footer class="footer" style="background-color:rgba(0,0,0,0.9)">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3" style="text-align:center">
+                    <i class="fa fa-rocket lol"></i><br />г. Днепр, ул. Амурская, 112
+                </div>
+                <div class="col-md-3"style="text-align:center" >
+                    <i class="fa fa-phone lol"></i><br />(+38) 063-769-69-00<br />(+38) 066-267-00-07
+                </div>
+                <div class="col-md-3" style="text-align:center">
+                    <i class="fa fa-envelope lol "></i><br />olesiatour@gmail.com
+                </div>
+                <div class="col-md-3" style="text-align:center" >
+                    <i class="fa fa-clock-o lol"></i><br />Понедельник - Пятница:<br /> 09:00 - 18:00
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
     <!-- END MAP -->
     @*@Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")*@
@@ -179,11 +209,11 @@
     <!-- aos js -->
     <script src="~/Scripts/js/aos.js"></script>
     <!-- switcher js -->
-    <script src="~/Scripts/js/switcher.js"></script>
+    @*<script src="~/Scripts/js/switcher.js"></script>*@
     <!-- map js -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuQV1y9-oIZq0LCktO8kB9tJ9_fDwH2h8"></script>
+    @*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuQV1y9-oIZq0LCktO8kB9tJ9_fDwH2h8"></script>*@
     <!-- unobtrusive-ajax -->
-    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    @*<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>*@
     <!-- scripts js -->
     <script src="~/Scripts/js/scripts.js"></script>
     <script>
